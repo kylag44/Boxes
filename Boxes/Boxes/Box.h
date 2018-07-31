@@ -8,6 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Box : NSObject
+@interface Box : NSObject {
+    float volume1;
+    float volume2;
+}
+
+
+@property (nonatomic, assign) float height;
+@property (nonatomic, assign) float length;
+@property (nonatomic, assign) float width;
+
+
+-(instancetype)initWithWidth: (NSInteger)width
+                      height: (NSInteger)height length:(NSInteger)length;
+
+-(NSInteger)volume;
+
+-(int)compareBoxes:(Box*)box2;
 
 @end
